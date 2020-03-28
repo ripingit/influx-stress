@@ -358,7 +358,7 @@ func (s *influxDBSink) Chan() chan stress.WriteResult {
 
 func (s *influxDBSink) Open() {
 	s.ticker = time.NewTicker(time.Second)
-	err := s.client.Create("")
+	err := nil
 	if err != nil {
 		panic(err)
 	}
